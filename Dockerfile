@@ -1,5 +1,8 @@
-FROM ubuntu:16.04
-MAINTAINER Jacob <chenjr0719@gmail.com>
+FROM ubuntu:22.04
+MAINTAINER yymagicer@163.com
+
+# 使用阿里云的 Ubuntu 镜像源
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV USER ubuntu
